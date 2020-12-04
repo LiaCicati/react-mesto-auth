@@ -15,8 +15,8 @@ import Register from "./Register";
 import InfoTooltip from "./InfoTooltip";
 import * as auth from "../utils/auth";
 import ProtectedRoute from "./ProtectedRoute";
-import authSuccess from "../images/success.svg";
-import authFail from "../images/fail.svg";
+import authSuccess from "../images/success.png";
+import authFail from "../images/fail.png";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(false);

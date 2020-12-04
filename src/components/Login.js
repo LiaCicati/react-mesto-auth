@@ -46,7 +46,7 @@ function Login({ onLogin }) {
           </button>
           <div className="auth__container-register">
             <p className="auth__register">
-              Ещё не зарегистрированы?{" "}
+              Ещё не зарегистрированы?
               <Link to="sign-up" className="auth__link">
                 Зарегистрироваться
               </Link>

@@ -19,22 +19,22 @@ import authSuccess from "../images/success.png";
 import authFail from "../images/fail.png";
 
 function App() {
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [isEditProfileModalOpen, setEditProfile] = React.useState(false);
-  const [isEditAvatarModalOpen, setEditAvatar] = React.useState(false);
-  const [isAddPlaceModalOpen, setAddCard] = React.useState(false);
-  const [deletedCard, setDeletedCard] = React.useState(null);
-  const [isModalWithDeleteOpen, setModalWithDelete] = React.useState(false);
-  const [selectedCard, setSelectedCard] = React.useState(null);
-  const [isModalImageOpen, setModalImage] = React.useState(false);
-  const [currentUser, setCurrentUser] = React.useState({});
-  const [cards, setCards] = React.useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isEditProfileModalOpen, setEditProfile] = useState(false);
+  const [isEditAvatarModalOpen, setEditAvatar] = useState(false);
+  const [isAddPlaceModalOpen, setAddCard] = useState(false);
+  const [deletedCard, setDeletedCard] = useState(null);
+  const [isModalWithDeleteOpen, setModalWithDelete] = useState(false);
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [isModalImageOpen, setModalImage] = useState(false);
+  const [currentUser, setCurrentUser] = useState({});
+  const [cards, setCards] = useState([]);
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
-  const [isInfoTooltipOpen, setIsInfoTooltipOpen] = React.useState(false);
-  const [tooltipImage, setTooltipImage] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const [isInfoTooltipOpen, setIsInfoTooltipOpen] = useState(false);
+  const [tooltipImage, setTooltipImage] = useState("");
+  const [message, setMessage] = useState("");
   const history = useHistory();
 
   useEffect(() => {
@@ -86,7 +86,6 @@ function App() {
     auth
       .authorize(email, password)
       .then((res) => {
-        console.log(res);
         if (res.token) {
           localStorage.setItem("token", res.token);
           setLoggedIn(true);
@@ -146,7 +145,7 @@ function App() {
     setIsInfoTooltipOpen(false);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     Promise.all([api.getInitialCards(), api.getUserInfo()])
       .then(([cards, userData]) => {
         setCurrentUser(userData);
@@ -253,7 +252,7 @@ function App() {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.addEventListener("keydown", handlerEscClose);
     document.addEventListener("click", closeByOverlay);
     return () => {

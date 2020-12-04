@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ModalWithForm from "./ModalWithForm";
 import HandlerSubmit from "./HandlerSubmit";
 
 function AddPlaceModal(props) {
-  const [name, setNameCard] = React.useState("");
-  const [link, setLinkCard] = React.useState("");
+  const [name, setNameCard] = useState("");
+  const [link, setLinkCard] = useState("");
 
   function handleSubmitCard(e) {
     e.preventDefault();

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import HandlerSubmit from "./HandlerSubmit";
 import ModalWithForm from "./ModalWithForm";
 
 function EditAvatarModal(props) {
-  const changeAvatar = React.useRef("");
+  const changeAvatar = useRef("");
 
   function handleSubmit(e) {
     e.preventDefault();

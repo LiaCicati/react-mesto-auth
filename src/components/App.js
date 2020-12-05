@@ -140,7 +140,6 @@ function App() {
     setAddCard(false);
     setModalImage(false);
     setModalWithDelete(false);
-    setSelectedCard(null);
     setDeletedCard(null);
     setIsInfoTooltipOpen(false);
   }

@@ -1,13 +1,12 @@
-# Фронтенд-аутентификация на «Реакте»
+# Frontend authentication on React
 
-- ### Ссылка на сайт :
+A service where people share photos of interesting places
+
+- ### Link to the website :
   [ Mesto Russia ](https://liacicati.github.io/react-mesto-auth/)
-### Все запросы на авторизацию, регистрацию и проверку токена работают через сервис `https://auth.nomoreparties.co`. 
+### All requests for authorization, registration and verification of the token work through the service `https://auth.nomoreparties.co`. 
 
- ### Планы по доработке :  
-- Сделать валидацию всех форм
-- Сделать шапку сайта и формы для аутентификации адаптивными для мобильных версий меньше чем 400px
 
-| Имя        | Email                |
+| Name       | Email                |
 | ---------- | -------------------- |
-| Чикати Лиа | LiaCicati@yandex.com |
+| Lia Cicati | liacicati@gmail.com  |
